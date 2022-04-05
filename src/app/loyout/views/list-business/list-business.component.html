@@ -1,0 +1,40 @@
+<div class="flex flex-wrap justify-center content-center py-6">
+  <h3 class="text-4xl font-normal leading-normal mt-0 mb-2 text-red-800">LISTADO DE EMPRESAS</h3>
+  <div class="flex justify-end w-[90%] py-3">
+    <button class="bg-red-500 text-white active:bg-red-600 font-bold uppercase text-sm px-6 py-3
+    rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all
+    duration-150" (click)="openDialog()">
+      Agregar
+    </button>
+  </div>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-[90%]">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> N° </th>
+      <td mat-cell *matCellDef="let element; let i = index"> {{i + 1}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef style="text-align: center"> Descripción </th>
+      <td mat-cell *matCellDef="let element" style="text-align: center"> {{element.descrip}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef style="text-align: center"> Tipo </th>
+      <td mat-cell *matCellDef="let element" style="text-align: center"> {{element.tipo}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+</div>

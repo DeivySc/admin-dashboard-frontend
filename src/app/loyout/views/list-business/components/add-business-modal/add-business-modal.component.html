@@ -1,0 +1,50 @@
+<div>
+  <h5 class="text-2xl font-bold text-center leading-normal mt-0 mb-2 text-red-700">
+    Agregar Empresa
+  </h5>
+  <div class="py-4">
+    <div class="space-x-4">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Nombre">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-select [(value)]="selected">
+          <mat-option value="option1">Ecommerce</mat-option>
+          <mat-option value="option2">Banca</mat-option>
+          <mat-option value="option3">Automotriz</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!--<div class="space-x-4">
+      <mat-form-field appearance="outline">
+        <mat-select [(value)]="selected">
+          <mat-option value="option1">Ecommerce</mat-option>
+          <mat-option value="option2">Banca</mat-option>
+          <mat-option value="option3">Automotriz</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <input matInput>
+      </mat-form-field>
+    </div>-->
+
+    <div class="space-x-4">
+      <mat-form-field appearance="outline" class="w-full">
+        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="flex justify-around">
+      <button class="text-red-500 bg-transparent border border-solid border-red-500 hover:bg-red-500 hover:text-white active:bg-red-600 font-bold uppercase text-sm px-6 py-3  rounded-full outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">
+        Cancelar
+      </button>
+      <button class="bg-red-500 text-white active:bg-red-600 font-bold uppercase text-sm px-6 py-3 rounded-full
+    shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+        Agregar
+      </button>
+    </div>
+  </div>
+</div>
