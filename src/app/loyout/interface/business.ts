@@ -1,6 +1,7 @@
 export interface Business {
-  id?:string;
-  name?:string;
-  descrip?:string;
-  est?:string;
+  cod_emp?:number;
+  nomb_emp?:string;
+  descripcion?:string;
+  cod_tipemp?:number;
+  img_emp:string;
 }

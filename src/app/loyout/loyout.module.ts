@@ -19,6 +19,7 @@ import {MatInputModule} from "@angular/material/input";
 
 import { AddBusinessModalComponent } from './views/list-business/components/add-business-modal/add-business-modal.component';
 import {HttpClientModule} from "@angular/common/http";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import {HttpClientModule} from "@angular/common/http";
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    HttpClientModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class LoyoutModule { }

@@ -9,6 +9,7 @@ const routes: Routes = [
     path: '',
     component: LoyoutComponent,
     children: [
+      {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
       {path: 'empresas', component: ListBusinessComponent},
       {path: 'dashboard', component: DashboardComponent}
     ]
